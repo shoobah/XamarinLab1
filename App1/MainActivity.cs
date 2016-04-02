@@ -11,7 +11,7 @@ using System.Text;
 
 namespace App1
 {
-    [Activity(Label = "App1", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Hämta adress", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity, ILocationListener
     {
         static readonly string TAG = "X:" + typeof(MainActivity).Name;
@@ -27,7 +27,7 @@ namespace App1
             _currentLocation = location;
             if (_currentLocation == null)
             {
-                _locationText.Text = "Unable to determine your location. Try again in a short while.";
+                _locationText.Text = "Kan inte hitta din plats. Prova igen om en stund.";
             }
             else
             {
@@ -90,7 +90,7 @@ namespace App1
         {
             if (_currentLocation == null)
             {
-                _addressText.Text = "Can't determine the current address. Try again in a few minutes.";
+                _addressText.Text = "Kan inte hitta din adress. Prova igen om en stund.";
                 return;
             }
 
@@ -122,7 +122,7 @@ namespace App1
             }
             else
             {
-                _addressText.Text = "Unable to determine the address. Try again in a few minutes.";
+                _addressText.Text = "Kan inte hitta din adress. Prova igen om en stund";
             }
         }
     }
